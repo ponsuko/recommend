@@ -1,0 +1,25 @@
+body{
+    text-align:center;
+    *{
+      box-sizing:border-box;
+    }
+  }
+  
+  section{
+    width: 400px;
+    margin: auto;
+    border: 2px solid #eee;
+    padding-bottom: 20px;
+  }
+  
+  .result{
+    width: 600px;
+    margin: auto;
+    border: 2px solid red;
+    padding-bottom: 20px;
+    
+    strong{
+      color: red;
+      font-size: 40px;
+    }
+  }

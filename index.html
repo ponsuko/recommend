@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.scss" />
+    <title>recommend</title>
+  </head>
+
+  <body>
+    <div id="app">
+    <h1>おすすめの旅行先を提案します</h1>
+    <div>
+      <p>
+        質問の答えに合わせて、あなたにぴったりの旅行先をご紹介します。
+      </p>
+      <section v-if="status === 1">
+        <h2>旅行に行くならどっち？</h2>
+        <button @click="q1('japan')">国内</button>
+        <button @click="q1('abroad')">海外</button>
+      </section>
+      <section v-if="status === 2">
+        <h2>好きな果物は？</h2>
+        <button @click="q2(1)">りんご</button>
+        <button @click="q2(2)">バナナ</button>
+        <button @click="q2(3)">ブドウ</button>
+      </section>
+      <div class="result" v-if="status === 3">
+        <h2>あなたにぴったりの旅行先は…</h2>
+        <p><strong>{{ result }}</strong>です！</p>
+        <p>事前に現地の情報を調べて旅行を充実させましょう！</p>
+        <button @click="reset">もう一度やる</button>
+        </div>
+      </div>
+    </div>
+    <script src="vue.js"></script>
+  </body>
+</html>
